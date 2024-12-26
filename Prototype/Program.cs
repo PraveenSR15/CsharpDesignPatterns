@@ -11,4 +11,11 @@ Console.WriteLine($"Employee {clonedEmployee.Name} was cloned under {clonedEmplo
 clonedManager.Name = "Tiger";
 Console.WriteLine($"Employee {clonedEmployee.Name} was cloned under {clonedEmployee.Manager.Name}.");
 
+var employee2 = new Employee("Pavi", clonedManager);
+var clonedEmployee2 = (Employee)employee2.Clone();
+Console.WriteLine($"Employee {clonedEmployee2.Name} was cloned under {clonedEmployee2.Manager.Name}.");
+
+clonedEmployee2.Name = "KuKu";
+Console.WriteLine($"Employee {clonedEmployee2.Name} was cloned under {clonedEmployee2.Manager.Name}.");
+
 Console.ReadKey();
